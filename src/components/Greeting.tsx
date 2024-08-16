@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function NameForm() {
+export default function Greeting() {
   const [name, setName] = useState('')
   const [showGreeting, setShowGreeting] = useState(false)
 

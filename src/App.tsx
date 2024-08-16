@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import './App.css'
-import NameForm from './components/Greeting'
-import Greeting from './components/Greeting'
+import Greeting from '@/components/Greeting'
+import Weather from '@/components/Weather'
+import Background from '@/components/Background'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <NameForm />
+      <Greeting />
+      <Weather />
+      <Background />
     </>
   )
 }
