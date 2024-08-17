@@ -35,7 +35,7 @@ export default function Greeting() {
     } else if (hours >= 18 && hours < 22) {
       return 'Good evening'
     } else {
-      return 'Good night'
+      return 'Sleep tight'
     }
   }
 

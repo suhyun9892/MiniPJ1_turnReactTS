@@ -1,44 +1,38 @@
 .todoBox {
-  position: absolute;
-  left: 50px;
+  display: flex;
+  justify-content: center;
 }
 .todoList {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 50px;
   gap: 15px;
   background-color: #fff;
   opacity: 0.7;
-  width: 40vw;
+  width: 30vw;
   height: 60vh;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 2px 5px 5px 2px #514e4e;
 }
 
-.todoList:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 85%;
-  width: 0;
-  height: 0;
-  border: 32px solid transparent;
-  border-left-color: #fff;
-  opacity: 1;
-  border-right: 0;
-  border-bottom: 0;
-  margin-top: -16px;
-  margin-right: -32px;
+.inputSection {
+  display: flex;
 }
 
 .todoInput {
-  margin-right: 5px;
+  border: none;
+  text-align: center;
+  height: 100%;
 }
 
-.checkbox {
-  text-decoration: line-through;
+.todoInput:focus {
+  outline: none;
+}
+.todoInput:focus::placeholder {
+  color: transparent;
 }
 
 .lists {
@@ -48,16 +42,52 @@
   width: 100%;
   align-items: center;
   overflow: scroll;
+  margin-top: 10px;
 }
 
 .todoli {
+  word-wrap: break-word;
   display: flex;
   align-items: center;
-  word-wrap: break-word;
-  width: 80%;
-  gap: 10px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  width: 70%;
+  align-self: center;
 }
 
 .todo {
-  background-color: #fff;
+  flex: 1;
+  word-wrap: break-word;
+  margin-left: 10px;
+}
+
+.todo .checked {
+  text-decoration: line-through;
+}
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.likeButton {
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #31364e;
+  color: #fff;
+  border: 0;
+  font-size: 0.7em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.5em;
+  position: relative;
+  display: flex;
+}
+
+.likeButton:active {
+  transform: scale(1.01);
 }
