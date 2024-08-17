@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import styles from './Greeting.module.css'
 
 export default function Greeting() {
   const [name, setName] = useState('')
@@ -24,20 +25,39 @@ export default function Greeting() {
     }
   }
 
+  function sayHi() {
+    const date = new Date()
+    const hours = date.getHours()
+    if (hours >= 6 && hours < 12) {
+      return 'Good morning'
+    } else if (hours >= 12 && hours < 18) {
+      return 'Good afternoon'
+    } else if (hours >= 18 && hours < 22) {
+      return 'Good evening'
+    } else {
+      return 'Good night'
+    }
+  }
+
   return (
-    <div>
+    <div className={styles.input_section}>
       {/* showGreeting이 false일 때만 input 요소를 렌더링 */}
       {!showGreeting && (
         <input
+          className={styles.input}
           value={name}
           onChange={e => setName(e.target.value)}
           onKeyDown={onkeydown}
-          placeholder="What is your name?"
+          placeholder="What's your name ?"
         />
       )}
 
       {/* showGreeting이 true일 때만 div 요소를 렌더링 */}
-      {showGreeting && <div>hello {name} !</div>}
+      {showGreeting && (
+        <div className="greeting">
+          {sayHi()} {name} !
+        </div>
+      )}
     </div>
   )
 }
