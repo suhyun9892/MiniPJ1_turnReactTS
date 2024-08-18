@@ -1,3 +1,8 @@
+.title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
 .todoBox {
   display: flex;
   justify-content: center;
@@ -7,25 +12,28 @@
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  gap: 15px;
-  background-color: #fff;
-  opacity: 0.7;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
   width: 30vw;
   height: 60vh;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 5px 5px 2px #514e4e;
+  font-size: 1.5rem;
 }
 
 .inputSection {
   display: flex;
+  gap: 5px;
 }
 
 .todoInput {
   border: none;
   text-align: center;
   height: 100%;
+  font-size: 1.5rem;
+  background-color: transparent;
 }
 
 .todoInput:focus {
@@ -56,23 +64,24 @@
   align-self: center;
 }
 
+.checkBox {
+  transform: scale(1.5);
+}
+
 .todo {
   flex: 1;
   word-wrap: break-word;
-  margin-left: 10px;
-}
-
-.todo .checked {
-  text-decoration: line-through;
+  margin-left: 15px;
 }
 
 .deleteBtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-size: 20px;
 }
 
-.likeButton {
+.doneButton {
   cursor: pointer;
   font: inherit;
   margin: 0;
@@ -81,11 +90,12 @@
   background-color: #31364e;
   color: #fff;
   border: 0;
-  font-size: 0.7em;
+  font-size: 0.8em;
   padding: 0.5em 0.5em;
   border-radius: 0.5em;
   position: relative;
   display: flex;
+  z-index: 1;
 }
 
 .likeButton:active {

@@ -55,7 +55,7 @@ export default function Greeting() {
       {/* showGreeting이 true일 때만 div 요소를 렌더링 */}
       {showGreeting && (
         <div className="greeting">
-          {sayHi()} {name} !
+          {sayHi()} <span className={styles.name}>{name}</span> !
         </div>
       )}
     </div>

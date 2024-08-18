@@ -50,7 +50,7 @@ export default function TodoList() {
     <>
       <div className={styles.todoBox}>
         <div className={styles.todoList}>
-          <h3 className={styles.h3}>Plans for today ({todos.length})</h3>
+          <h2 className={styles.title}>Plans for today ({todos.length})</h2>
           <div className={styles.inputSection}>
             <form onSubmit={onSubmit}>
               <input
@@ -64,9 +64,9 @@ export default function TodoList() {
             </form>
 
             <button
-              aria-label="Like button"
+              aria-label="allDone button"
               onClick={allDone}
-              className={styles.likeButton}>
+              className={styles.doneButton}>
               All done 🎉
             </button>
           </div>
@@ -75,8 +75,12 @@ export default function TodoList() {
               <li
                 key={index}
                 className={styles.todoli}>
-                <input type="checkbox" />
+                <input
+                  className={styles.checkBox}
+                  type="checkbox"
+                />
                 <span className={styles.todo}>{todo}</span>
+                <button aria-label="edit Button"></button>
                 <button
                   className={styles.deleteBtn}
                   aria-label="Delete button"
